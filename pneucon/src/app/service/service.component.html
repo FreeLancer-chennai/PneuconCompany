@@ -1,21 +1,33 @@
+<div class="services-section-bg py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="fw-bold" style="color:#0d3b66; font-size:2.5rem;">
+        <span style="border-left:6px solid #ff6600; padding-left:12px;">Our services</span>
+      </h2>
+      <a routerLink="/services" class="btn btn-outline-warning rounded-pill px-4 fw-bold">
+        See More <span class="ms-2">&#8594;</span>
+      </a>
+    </div>
 
-<div class="container py-5">
-	<h2 class="text-center mb-5 fw-bold" style="color:#0d3b66;">Our Services</h2>
-	<div class="row justify-content-center">
-			<div class="col-12 col-sm-6 col-md-4 mb-4">
-				<div class="card h-100 shadow-sm">
-					<img src="assets/images/Service1.jpeg" class="card-img-top img-fluid" alt="Service 1">
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 mb-4">
-				<div class="card h-100 shadow-sm">
-					<img src="assets/images/Service2.jpeg" class="card-img-top img-fluid" alt="Service 2">
-				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 mb-4">
-				<div class="card h-100 shadow-sm">
-					<img src="assets/images/Service3.jpeg" class="card-img-top img-fluid" alt="Service 3">
-				</div>
-			</div>
-	</div>
+    <div class="services-cards-wrapper d-flex flex-row gap-4 overflow-auto pb-3">
+      <div class="service-card"
+           *ngFor="let service of services; let i = index"
+           (mouseenter)="hovered=i"
+           (mouseleave)="hovered=null">
+        
+        <img [src]="service.img" class="service-card-img" [alt]="service.title">
+
+        <div class="service-card-overlay">
+          <h3 class="service-title">{{ service.title }}</h3>
+          <p class="service-desc" *ngIf="service.desc">{{ service.desc }}</p>
+        </div>
+
+        <button *ngIf="hovered===i"
+                class="service-arrow-btn"
+                (click)="navigateTo(service.route)">
+          &#8594;
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
