@@ -1,26 +1,43 @@
+<!-- Top Bar -->
+<div class="top-bar">
+  <span>Welcome to Pneucon</span>
+</div>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid custom-navbar-bg p-3">
-    <div class="d-flex align-items-center justify-content-between w-100">
-      <span class="navbar-brand pneucon-title">Pneucon</span>
-      <ul class="navbar-nav nav-center mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link nav-underline" aria-current="page" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-underline" href="#about-us">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-underline" href="#service">Service</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-underline" href="#footer">Footer</a>
-        </li>
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar-bg">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+    
+    <!-- Logo -->
+    <a class="navbar-brand pneucon-title" href="#">
+      Pneucon
+    </a>
+
+    <!-- Navigation Links -->
+    <ul class="navbar-nav nav-center">
+      <li class="nav-item">
+        <a class="nav-link nav-underline active" href="#home">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-underline" href="#about-us">ABOUT US</a>
+      </li>
+
+    <!-- SERVICES with dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link nav-underline" href="#services" role="button">
+        SERVICES <span class="dropdown-arrow">▼</span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Inspection And Testing</a></li>
+        <li><a class="dropdown-item" href="#">Electrical Services</a></li>
+        <li><a class="dropdown-item" href="#">Mechanical Services</a></li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
+    </li>
+      <li class="nav-item">
+        <a class="nav-link nav-underline" href="#career">CAREER</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-underline" href="#contact">CONTACT US</a>
+      </li>
+    </ul>
   </div>
 </nav>
