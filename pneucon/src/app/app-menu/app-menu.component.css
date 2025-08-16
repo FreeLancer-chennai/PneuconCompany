@@ -1,15 +1,56 @@
 
+
 .pneucon-title {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
+	position: static;
 	font-weight: bold;
 	font-size: 1.5rem;
-	color: #fff;
+	color: #0d3b66;
+	margin-right: 2rem;
 	pointer-events: none;
+}
+
+.custom-navbar-bg {
+	background: #b3e0ff !important;
+}
+
+.nav-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	gap: 1.5rem;
+}
+
+.nav-link.nav-underline {
+	position: relative;
+	color: #0d3b66 !important;
+	background: transparent !important;
+	transition: color 0.2s;
+}
+
+.nav-link.nav-underline::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 3px;
+	background: #0d3b66;
+	transition: width 0.3s;
+	margin: 0 auto;
+	border-radius: 2px;
+}
+
+.nav-link.nav-underline:hover::after,
+.nav-link.nav-underline.active::after {
+	width: 100%;
+}
+
+.nav-link.nav-underline:hover,
+.nav-link.nav-underline.active {
+	color: #0077b6 !important;
 }
 
 nav.navbar {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
+  background: transparent !important;
 }
