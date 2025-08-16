@@ -1,0 +1,15 @@
+
+.pneucon-title {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: #fff;
+	pointer-events: none;
+}
+
+nav.navbar {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
