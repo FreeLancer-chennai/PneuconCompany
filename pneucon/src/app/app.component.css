@@ -1,4 +1,75 @@
 
+/* WhatsApp Modal Styles */
+.whatsapp-modal {
+	display: none;
+	position: fixed;
+	z-index: 10000;
+	right: 2.2rem;
+	bottom: 7.5rem;
+	width: 350px;
+	max-width: 90vw;
+	background: transparent;
+	box-shadow: none;
+}
+.whatsapp-modal-content {
+	background: #fff;
+	padding: 2rem 2.5rem 1.5rem 2.5rem;
+	border-radius: 1rem;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+	text-align: center;
+	position: relative;
+	width: 100%;
+}
+.whatsapp-close {
+	position: absolute;
+	top: 0.7rem;
+	right: 1.2rem;
+	font-size: 2rem;
+	color: #888;
+	cursor: pointer;
+	font-weight: bold;
+	transition: color 0.2s;
+}
+.whatsapp-close:hover {
+	color: #25d366;
+}
+
+.floating-social-links {
+	position: fixed;
+	right: 2.2rem;
+	bottom: 5.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	z-index: 9999;
+}
+
+.social-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+	color: #25d366;
+	font-size: 1.5rem;
+	transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+	text-decoration: none;
+}
+
+.social-btn.whatsapp {
+	color: #25d366;
+}
+.social-btn.linkedin {
+	color: #0077b5;
+}
+.social-btn:hover {
+	background: #e6f7ff;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
 body, app-root {
 	margin: 0 !important;
 	padding: 0 !important;

@@ -2,4 +2,29 @@
 <app-home></app-home>
 <app-service></app-service>
 <app-about-us></app-about-us>
+
+<!-- Floating Social Links -->
+<div class="floating-social-links">
+	<button class="social-btn whatsapp" title="WhatsApp" type="button" (click)="openWhatsappModal()">
+		<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+			<path d="M13.601 2.326A7.875 7.875 0 0 0 8.003 0C3.582 0 .003 3.582.003 8c0 1.409.37 2.773 1.07 3.98L0 16l4.13-1.08A7.963 7.963 0 0 0 8.003 16c4.418 0 7.997-3.582 7.997-8 0-1.91-.62-3.7-1.799-5.074zm-5.598 12.3a6.6 6.6 0 0 1-3.356-.92l-.24-.143-2.45.64.654-2.39-.156-.246A6.57 6.57 0 0 1 1.4 8c0-3.626 2.977-6.6 6.603-6.6 1.76 0 3.414.684 4.66 1.927A6.56 6.56 0 0 1 14.6 8c0 3.626-2.977 6.626-6.597 6.626zm3.62-4.987c-.198-.099-1.174-.579-1.356-.646-.182-.066-.314-.099-.446.1-.132.198-.513.646-.63.779-.116.132-.232.148-.43.05-.198-.099-.837-.308-1.594-.983-.59-.526-.99-1.175-1.107-1.373-.116-.198-.012-.305.087-.403.09-.089.198-.232.297-.347.099-.116.132-.198.198-.33.066-.132.033-.248-.017-.347-.05-.099-.446-1.077-.611-1.477-.161-.387-.325-.334-.446-.34l-.38-.007c-.132 0-.347.05-.53.248-.182.198-.695.68-.695 1.66 0 .98.712 1.926.812 2.06.099.132 1.4 2.14 3.393 2.917.475.164.844.262 1.133.335.476.114.91.098 1.253.06.382-.045 1.174-.48 1.34-.944.165-.463.165-.86.116-.944-.05-.083-.182-.132-.38-.232z"/>
+		</svg>
+	</button>
+<!-- WhatsApp Chat Modal -->
+<div class="whatsapp-modal" [ngStyle]="{display: whatsappModalOpen ? 'block' : 'none'}" (click)="closeWhatsappModal($event)">
+	<div class="whatsapp-modal-content" (click)="$event.stopPropagation()">
+		<span class="whatsapp-close" (click)="closeWhatsappModal()">&times;</span>
+		<h5>Start WhatsApp Chat</h5>
+		<p>Chat with us on WhatsApp!</p>
+		<button class="btn btn-success w-100" (click)="startWhatsappChat()">Start Chat</button>
+	</div>
+</div>
+
+	<a href="https://www.linkedin.com/company/pneucon" target="_blank" class="social-btn linkedin" title="LinkedIn">
+		<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+			<path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.521-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212h2.4v-4.045c0-.216.016-.432.08-.586.175-.432.574-.88 1.244-.88.877 0 1.228.664 1.228 1.637v3.874h2.4v-4.152c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.6 5.6 0 0 1 .016-.025V6.169h-2.4c.03.7 0 7.225 0 7.225z"/>
+		</svg>
+	</a>
+</div>
+
 <app-footer></app-footer>
