@@ -1,3 +1,71 @@
+.services-cards-wrapper {
+  overflow-x: auto;
+  cursor: grab;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+}
+.services-cards-wrapper.dragging {
+  cursor: grabbing;
+}
+/* Hide scrollbar visually but keep it functional for drag */
+.services-cards-wrapper::-webkit-scrollbar {
+  display: none;
+}
+/* Hide horizontal scroll for service cards wrapper */
+.services-cards-wrapper {
+  overflow-x: hidden;
+}
+/* Certificate gallery styles */
+.cert-content-box {
+  background: transparent;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  box-shadow: none;
+}
+.cert-content-box.move-right {
+  margin: 0;
+}
+.cert-gallery {
+  min-height: 220px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.gallery-img {
+  width: 180px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 0.7rem;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gallery-img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+.cert-gallery-controls button {
+  width: 44px;
+  height: 44px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Certificate slider styles */
+.cert-slider-img {
+  max-height: 420px;
+  object-fit: contain;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  transition: transform 0.2s;
+}
+.cert-slider-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
 .service-card {
   position: relative;
   flex: 0 0 350px;   /* bigger card width */

@@ -9,7 +9,15 @@
       </a>
     </div>
 
-    <div class="services-cards-wrapper d-flex flex-row gap-4 overflow-auto pb-3">
+  <div class="services-cards-wrapper d-flex flex-row gap-4 pb-3"
+     #cardsWrapper
+     (mousedown)="onDragStart($event, cardsWrapper)"
+     (touchstart)="onDragStart($event, cardsWrapper)"
+     (mousemove)="onDragMove($event, cardsWrapper)"
+     (touchmove)="onDragMove($event, cardsWrapper)"
+     (mouseup)="onDragEnd()"
+     (mouseleave)="onDragEnd()"
+     (touchend)="onDragEnd()">
       <div class="service-card"
            *ngFor="let service of services; let i = index"
            (mouseenter)="hovered=i"
@@ -30,4 +38,21 @@
       </div>
     </div>
   </div>
-</div>
+
+
+  <!-- Certificate Content and Images Centered Below Services -->
+  <div class="cert-content-box text-center mt-5">
+    <h3 class="fw-bold mb-3" style="color:#0d3b66;">Certificates</h3>
+    <p class="mb-4">
+      Pneucon is proud to be recognized for our commitment to quality, safety, and business excellence.<br>
+      Our certifications demonstrate our dedication to industry standards and best practices.
+    </p>
+    <div class="cert-gallery d-flex flex-column flex-md-row align-items-center justify-content-center gap-4">
+      <img src="assets/images/BIZSAFE STAR CERTIFICATE - 25062027.jpg" class="cert-slider-img gallery-img mb-3 mb-md-0" alt="Bizzsafe Certificate"
+        (click)="openCertificate('assets/certificate/bizsafe.pdf')">
+      <img src="assets/images/ISO 45001 CERT - PNEUCON ENGINEERING PTE. LTD..jpg" class="cert-slider-img gallery-img mb-3 mb-md-0" alt="ISO Certificate"
+        (click)="openCertificate('assets/certificate/iso.pdf')">
+      <img src="assets/images/SINGAPORE BUSINESS FEDERATION.jpg" class="cert-slider-img gallery-img" alt="Singapore Certificate"
+        (click)="openCertificate('assets/certificate/singapore.pdf')">
+    </div>
+  </div>

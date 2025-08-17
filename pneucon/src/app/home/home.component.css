@@ -41,9 +41,10 @@
 	letter-spacing: 0.2em;
 }
 
+
 .animated-title .letter {
 	opacity: 0;
-	animation: fadeInOut 1.4s linear infinite;
+	animation: fadeInOut 2.8s linear infinite;
 }
 
 .animated-title .letter:nth-child(1) { animation-delay: 0s; }
