@@ -1,0 +1,36 @@
+<div class="cert-section d-flex flex-column flex-md-row align-items-start">
+  <!-- Left side (Description) -->
+  <div class="cert-description text-white pe-md-5">
+    <h3 class="fw-bold mb-3">Certificates</h3>
+    <p class="mb-4">
+      Pneucon is proud to be recognized for our commitment to quality, safety, and business excellence.<br>
+      Our certifications demonstrate our dedication to industry standards and best practices.
+    </p>
+  </div>
+
+  <!-- Right side (Certificates gallery/slider) -->
+  <div class="cert-gallery-wrapper d-flex align-items-center">
+    <!-- <button class="nav-btn me-3" (click)="slideCertificates(-1)">&#10094;</button> -->
+
+    <div class="cert-gallery d-flex gap-3">
+      <img *ngFor="let cert of certImages"
+        [src]="cert.img"
+        [alt]="cert.alt"
+        class="cert-slider-img"
+        (click)="openCertificate(cert.pdf)">
+    </div>
+
+    <!-- <button class="nav-btn ms-3" (click)="slideCertificates(1)">&#10095;</button> -->
+  </div>
+</div>
+
+<!-- Modal for PDF Viewer -->
+<div class="pdf-modal" *ngIf="selectedPdf">
+  <div class="pdf-overlay" (click)="closePdf()"></div>
+  <div class="pdf-container">
+    <button class="close-btn" (click)="closePdf()">×</button>
+    <!-- ...existing code... -->
+    <iframe [src]="safePdfUrl" width="100%" height="600px"></iframe>
+    <!-- ...existing code... -->
+  </div>
+</div>

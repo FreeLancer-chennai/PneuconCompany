@@ -44,7 +44,7 @@
 
 .animated-title .letter {
 	opacity: 0;
-	animation: fadeInOut 2.8s linear infinite;
+	animation: fadeInOut 2.8s linear forwards; /* plays once and stays at end state */
 }
 
 .animated-title .letter:nth-child(1) { animation-delay: 0s; }
@@ -58,6 +58,5 @@
 @keyframes fadeInOut {
   0% { opacity: 0; }
   10% { opacity: 1; }
-  60% { opacity: 1; }
-  100% { opacity: 0; }
+  100% { opacity: 1; }  /* stays visible after animation */
 }

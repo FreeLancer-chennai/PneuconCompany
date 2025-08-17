@@ -1,0 +1,94 @@
+/* Background section (full box, no rounded corners) */
+.cert-section {
+  background-color: #435f6e; /* Dark background */
+  color: #fff;
+  padding: 3rem 2rem;
+  width: 100%;
+  border-radius: 0; /* removed rounded corners */
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif; /* Stylish modern font */
+}
+
+/* Left description */
+.cert-description {
+  max-width: 350px;
+}
+
+.cert-description h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'Roboto Slab', serif; /* elegant heading font */
+}
+
+.cert-description p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 400;
+  opacity: 0.9;
+  font-family: 'Poppins', sans-serif;
+}
+
+.view-all-link {
+  color: #f0c040;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.view-all-link:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+/* Gallery slider */
+.cert-gallery-wrapper {
+  flex: 1;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.cert-gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.cert-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.cert-slider-img {
+  width: 220px;
+  height: 300px;
+  object-fit: contain;
+  cursor: pointer;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cert-slider-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+/* Navigation buttons */
+.nav-btn {
+  background: #222;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav-btn:hover {
+  background: #444;
+}
