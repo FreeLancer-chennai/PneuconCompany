@@ -34,7 +34,7 @@ export class ServiceComponent {
     {
       title: 'Preventive Maintenance',
       desc: 'Conducting regular routine checks to prevent issues before occurring.',
-      img: 'assets/images/Service2.jpeg',
+      img: 'assets/images/Service4.jpg',
       route: 'preventive-maintenance'
     }
   ];

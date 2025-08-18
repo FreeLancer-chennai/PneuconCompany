@@ -15,28 +15,28 @@
     <!-- Navigation Links -->
     <ul class="navbar-nav nav-center">
       <li class="nav-item">
-        <a class="nav-link nav-underline active" href="#home">HOME</a>
+        <a class="nav-link nav-underline active" routerLink="/home" routerLinkActive="active">HOME</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link nav-underline" routerLink="/about-us" routerLinkActive="active">ABOUT US</a>
+        <a class="nav-link nav-underline" [routerLink]="['/about']" routerLinkActive="active">ABOUT US</a>
       </li>
 
     <!-- SERVICES with dropdown -->
     <li class="nav-item dropdown">
-      <a class="nav-link nav-underline" href="#services" role="button">
+      <a class="nav-link nav-underline" routerLink="/services" routerLinkActive="active" role="button">
         SERVICES <span class="dropdown-arrow">▼</span>
       </a>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Inspection And Testing</a></li>
-        <li><a class="dropdown-item" href="#">Electrical Services</a></li>
-        <li><a class="dropdown-item" href="#">Mechanical Services</a></li>
+        <li><a class="dropdown-item" routerLink="/inspection">Inspection And Testing</a></li>
+        <li><a class="dropdown-item" routerLink="/electricalServices">Electrical Services</a></li>
+        <li><a class="dropdown-item" routerLink="/mechanicalServices">Mechanical Services</a></li>
       </ul>
     </li>
       <li class="nav-item">
-        <a class="nav-link nav-underline" href="#career">CAREER</a>
+        <a class="nav-link nav-underline" routerLink="/career">CAREER</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link nav-underline" routerLink="/contact-us" routerLinkActive="active">CONTACT US</a>
+        <a class="nav-link nav-underline" routerLink="/contact" routerLinkActive="active">CONTACT US</a>
       </li>
     </ul>
   </div>

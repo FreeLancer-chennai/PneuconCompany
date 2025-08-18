@@ -1,16 +1,13 @@
 import { Component } from '@angular/core';
-import {Router} from '@angular/router'
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './app-menu.component.html',
   styleUrl: './app-menu.component.css'
 })
 export class AppMenuComponent {
- constructor(private router:Router){}
-  // navigateToBlankPage(){
-  //     this.router.navigate(['/about-us']);
-  //  }
+
 }

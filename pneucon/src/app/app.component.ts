@@ -7,11 +7,12 @@ import { FooterComponent } from './footer/footer.component';
 import { ServiceComponent } from './service/service.component';
 import { AboutUsComponent } from './about-us/about-us.component'; 
 import { CertificateComponent } from './certificate/certificate.component';
+import { ContactUsComponent } from './contact-us.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, AppMenuComponent, HomeComponent, FooterComponent, ServiceComponent, AboutUsComponent,CertificateComponent],
+  imports: [CommonModule, RouterOutlet, AppMenuComponent, HomeComponent, FooterComponent, ServiceComponent, AboutUsComponent,CertificateComponent,ContactUsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
